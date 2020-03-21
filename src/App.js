@@ -1,14 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Test from '~/components/Test';
+import { Provider } from 'react-redux';
+import ReduxToastr from 'react-redux-toastr';
 
-function App() {
-  return (
-    <div className="App">
-      <Test />
-    </div>
-  );
-}
+import store from './store';
+import Routes from './routes';
+
+import GlobalStyle from './styles/global';
+
+const App = () => (
+  <Provider store={store}>
+    <>
+      <Routes />
+      <ReduxToastr />
+      <GlobalStyle />
+    </>
+  </Provider>
+);
+
 
 export default App;
