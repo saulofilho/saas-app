@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   flex: 1;
   height: 100%;
-  background: linear-gradient(to right, rgb(103, 178, 111), rgb(76, 162, 205));
+  background: #192E0F;
   display:flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const SignForm = styled.form`
-  background: linear-gradient(to left, rgb(67, 198, 172), rgb(248, 255, 174));
+  background: #202225;
   border-radius: 5px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
   padding: 40px;

@@ -7,9 +7,12 @@ import store from '~/store';
 const GuestRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={(props) => (!store.getState().auth.signedIn ? (<Component {...props} />) : (
+    render={props => (!store.getState().auth.signedIn ? (
+      <Component {...props} />
+    ) : (
       <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-    ))}
+    ))
+    }
   />
 );
 
